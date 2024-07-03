@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- 電話番号の自動検出と変換を無効にする -->
+  <meta name="format-detection" content="telephone=no" />
+  <title>複数タブ</title>
+  <meta name="description" content="" />
+
+
+  <!-- CSS -->
+  <!-- <link rel="stylesheet" href="/css/style.css?ver=1.0.2" /> -->
+  <!-- JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script defer src="/js/script.js?ver=1.0.1"></script>
+</head>
+
+<body id="body">
+  <style>
+    .c-tab-title {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    .c-tab-menu {
+      display: flex;
+      justify-content: center;
+      gap: 2.8125rem;
+      margin-top: 3.5rem;
+    }
+
+    @media screen and (max-width: 767px) {
+      .c-tab-menu {
+        gap: 0.625rem;
+        margin-inline: auto;
+        width: 98%;
+      }
+    }
+
+    .c-tab-menu__item {
+      color: #022b44;
+      position: relative;
+      display: block;
+      background-color: #f3f0ed;
+      border-width: 2px 2px 0px 2px;
+      border-style: solid;
+      border-color: #022b44;
+      border-radius: 15px 15px 0 0;
+      padding: 1rem 1.25rem;
+      transition: background-color 400ms, color 400ms;
+      text-align: center;
+      max-width: 13.75rem;
+      width: 20%;
+    }
+
+    @media screen and (max-width: 767px) {
+      .c-tab-menu__item {
+        font-size: 0.875rem;
+        padding: 0.75rem 0.625rem;
+        max-width: 9.375rem;
+        width: 45%;
+      }
+    }
+
+    .c-tab-menu__item.is-active {
+      background-color: #022b44;
+      color: #f3f0ed;
+    }
+
+    @media (any-hover: hover) {
+      .c-tab-menu__item:hover {
+        background-color: #022b44;
+        color: #f3f0ed;
+      }
+    }
+
+    .c-tab-content {
+      display: none;
+      max-width: 62.5rem;
+      margin-inline: auto;
+    }
+
+    .c-tab-content.is-show {
+      display: block;
+    }
+  </style>
+  <main>
+    <h2 class="c-tab-title">複数のタブ設置</h2>
+    <div class="js-tab">
+      <div class="c-tab-menu">
+        <button class="c-tab-menu__item is-active js-tab-item" data-tab="01">
+          タブ1
+        </button>
+        <button class="c-tab-menu__item js-tab-item" data-tab="02">
+          タブ2
+        </button>
+        <button class="c-tab-menu__item js-tab-item" data-tab="03">
+          タブ3
+        </button>
+      </div>
+      <div class="c-tab-contents">
+        <div class="c-tab-content js-tab-content is-show" data-panel="01">
+          aaaa
+        </div>
+        <div class="c-tab-content js-tab-content" data-panel="02">
+          bbbb
+        </div>
+        <div class="c-tab-content js-tab-content" data-panel="03">
+          cc<br>cc<br>cc<br>cc
+        </div>
+      </div>
+    </div>
+
+    <div class="js-tab">
+      <div class="c-tab-menu">
+        <button class="c-tab-menu__item is-active js-tab-item" data-tab="01">
+          タブ1
+        </button>
+        <button class="c-tab-menu__item js-tab-item" data-tab="02">
+          タブ2
+        </button>
+        <button class="c-tab-menu__item js-tab-item" data-tab="03">
+          タブ3
+        </button>
+      </div>
+      <div class="c-tab-contents">
+        <div class="c-tab-content js-tab-content is-show" data-panel="01">
+          コンテンツ111111111111111
+        </div>
+        <div class="c-tab-content js-tab-content" data-panel="02">
+          コンテンツ22222222222222222222
+        </div>
+        <div class="c-tab-content js-tab-content" data-panel="03">
+          コンテンツ3333333333333333333
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>
